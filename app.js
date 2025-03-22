@@ -1,0 +1,19 @@
+const express = require('express');
+const path = require('node:path');
+const { indexRouter } = require('./routes/indexRouter');
+const { newMessageRouter } = require('./routes/newMessageRouter');
+require('dotenv').config();
+
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+app.use('/', indexRouter);
+app.use('/new', newMessageRouter);
+
+app.listen(PORT, () => {
+  console.log(`Server is listening on port: ${PORT}`);
+});

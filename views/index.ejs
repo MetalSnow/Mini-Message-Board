@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- include('form') %> <% messages.map((message)=>{ %>
+    <div>
+      <p><%= message.user %></p>
+      <p><%= message.date %></p>
+      <p><%= message.text %></p>
+    </div>
+    <% }) %>
+  </body>
+</html>
