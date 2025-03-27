@@ -3,10 +3,11 @@
     <title><%= title %></title>
   </head>
   <body>
-    <%- include('form') %> <% messages.map((message)=>{ %>
+    <a href="/new">New</a>
+    <% messages.map((message)=>{ %>
     <div>
       <p><%= message.user %></p>
-      <p><%= message.date %></p>
+      <p><%= message.added %></p>
       <p><%= message.text %></p>
     </div>
     <% }) %>

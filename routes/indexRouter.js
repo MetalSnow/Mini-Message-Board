@@ -6,17 +6,17 @@ const messages = [
   {
     text: 'Hello, im a software engineer',
     user: 'Metal',
-    date: new Date(),
+    added: new Date(),
   },
   {
     text: 'Hi, im an architect',
     user: 'Bob',
-    date: new Date(),
+    added: new Date(),
   },
   {
     text: 'hey, im a doctor',
     user: 'Vincent',
-    date: new Date(),
+    added: new Date(),
   },
 ];
 
@@ -24,4 +24,4 @@ indexRouter.get('/', (req, res) => {
   res.render('index', { title: 'Mini Messageboard', messages: messages });
 });
 
-module.exports = { indexRouter };
+module.exports = { indexRouter, messages };
