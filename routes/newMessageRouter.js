@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const { messages } = require('./indexRouter');
+const { nanoid } = require('nanoid');
 
 const newMessageRouter = Router();
 
@@ -11,6 +12,7 @@ newMessageRouter.post('/new', (req, res) => {
   const msg = req.body;
 
   messages.push({
+    id: nanoid(),
     text: msg.messageText,
     user: msg.authorName,
     added: new Date(),

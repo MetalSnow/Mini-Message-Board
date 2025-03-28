@@ -7,8 +7,8 @@
     <% messages.map((message)=>{ %>
     <div>
       <p><%= message.user %></p>
-      <p><%= message.added %></p>
       <p><%= message.text %></p>
+      <a href="/details/<%= message.id %>">Open</a>
     </div>
     <% }) %>
   </body>
