@@ -11,7 +11,7 @@ newMessageRouter.get('/new', (req, res) => {
 newMessageRouter.post('/new', (req, res) => {
   const msg = req.body;
 
-  messages.push({
+  messages.unshift({
     id: nanoid(),
     text: msg.messageText,
     user: msg.authorName,

@@ -1,15 +1,19 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <a href="/new">New</a>
-    <% messages.map((message)=>{ %>
-    <div>
-      <p><%= message.user %></p>
-      <p><%= message.text %></p>
-      <a href="/details/<%= message.id %>">Open</a>
-    </div>
-    <% }) %>
+    <h1><%= title %></h1>
+    <a href="/new">New Message</a>
+    <section>
+      <% messages.map((message)=>{ %>
+      <div>
+        <span><%= message.user %></span>
+        <p><%= message.text %></p>
+        <a href="/details/<%= message.id %>">Open</a>
+      </div>
+      <% }) %>
+    </section>
   </body>
 </html>

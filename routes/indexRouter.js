@@ -6,6 +6,12 @@ const indexRouter = Router();
 const messages = [
   {
     id: nanoid(),
+    text: 'Hello, im a Business man :D',
+    user: 'Metal',
+    added: new Date(),
+  },
+  {
+    id: nanoid(),
     text: 'Hello, im a software engineer',
     user: 'Metal',
     added: new Date(),

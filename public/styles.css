@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
+
+  & h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 10px;
+    letter-spacing: 4px;
+    margin: 0;
+    text-shadow: 1px 0px rgba(54, 52, 52, 0.377);
+  }
+
+  & > a {
+    padding: 4px 13px;
+    background-color: rgb(63, 13, 13);
+    color: white;
+    border-radius: 6px;
+  }
+
+  & section {
+    padding: 20px 0px;
+    overflow-y: auto;
+    background-color: black;
+    height: 70%;
+    width: 50%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
+
+    & div:first-child {
+      background-color: rgb(239, 255, 216);
+    }
+
+    & div {
+      background-color: white;
+      width: 70%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 0 20px 20px 20px;
+
+      & span {
+        font-weight: bold;
+        color: rgb(84, 1, 25);
+      }
+
+      & a {
+        font-size: 14px;
+        width: fit-content;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
