@@ -9,7 +9,7 @@ body {
   gap: 1.3rem;
 
   & h1 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     padding: 10px;
     letter-spacing: 4px;
     margin: 0;
@@ -21,6 +21,7 @@ body {
     background-color: rgb(63, 13, 13);
     color: white;
     border-radius: 6px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   }
 
   & section {
@@ -63,6 +64,53 @@ body {
   }
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  & h2 {
+    text-align: center;
+  }
+
+  & input,
+  & textarea {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    outline: none;
+    width: 100%;
+    padding: 6px 18px;
+    font-size: 16px;
+    margin-top: 3px;
+  }
+
+  & textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 18px;
+    box-sizing: border-box;
+    resize: none;
+  }
+
+  & button {
+    padding: 4px 13px;
+    background-color: rgb(63, 13, 13);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    & a {
+      color: white;
+    }
+  }
+}
+
 a {
   text-decoration: none;
+}
+
+a:hover,
+button:hover {
+  opacity: 0.7;
 }

@@ -1,14 +1,13 @@
 <html>
   <head>
     <title>Message Details</title>
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div>
-      <h2>Message Details</h2>
-      <p><strong>User:</strong> <%= message.user %></p>
-      <p><strong>Posted:</strong> <%= message.added.toLocaleString() %></p>
-      <p><strong>Message:</strong> <%= message.text %></p>
-      <a href="/">Return to all messages</a>
-    </div>
+    <h2>Message Details</h2>
+    <p><strong>User:</strong> <%= message.user %></p>
+    <p><strong>Posted:</strong> <%= message.added.toLocaleString() %></p>
+    <p><strong>Message:</strong> <%= message.text %></p>
+    <a href="/">Return to all messages</a>
   </body>
 </html>
