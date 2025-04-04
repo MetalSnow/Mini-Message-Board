@@ -1,24 +1,13 @@
 const { Router } = require('express');
-const { messages } = require('./indexRouter');
-const { nanoid } = require('nanoid');
+const {
+  createMessage,
+  getForm,
+} = require('../controllers/newMessageController');
 
 const newMessageRouter = Router();
 
-newMessageRouter.get('/new', (req, res) => {
-  res.render('form');
-});
+newMessageRouter.get('/new', getForm);
 
-newMessageRouter.post('/new', (req, res) => {
-  const msg = req.body;
-
-  messages.unshift({
-    id: nanoid(),
-    text: msg.messageText,
-    user: msg.authorName,
-    added: new Date(),
-  });
-
-  res.redirect('/');
-});
+newMessageRouter.post('/new', createMessage);
 
 module.exports = { newMessageRouter };

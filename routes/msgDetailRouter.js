@@ -1,14 +1,8 @@
 const { Router } = require('express');
-const { messages } = require('./indexRouter');
+const { getMessageDetail } = require('../controllers/msgDetailConroller');
 
 const msgDetailRouter = Router();
 
-msgDetailRouter.get('/details/:id', (req, res) => {
-  const message = messages.find((m) => m.id === req.params.id);
-  if (!message) {
-    return res.status(404).send('Message not found');
-  }
-  res.render('messageDetails', { message: message });
-});
+msgDetailRouter.get('/details/:id', getMessageDetail);
 
 module.exports = { msgDetailRouter };
