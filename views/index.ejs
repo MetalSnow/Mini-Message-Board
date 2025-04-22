@@ -9,7 +9,7 @@
     <section>
       <% messages.map((message)=>{ %>
       <div>
-        <span><%= message.user %></span>
+        <span><%= message.username %></span>
         <p><%= message.text %></p>
         <a href="/details/<%= message.id %>">Open</a>
       </div>
