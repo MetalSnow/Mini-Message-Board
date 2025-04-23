@@ -1,19 +1,19 @@
-const { nanoid } = require('nanoid');
-const { messages } = require('./indexController');
+const { insertMessage } = require('../db/queries');
 
 function getForm(req, res) {
   res.render('form');
 }
 
-function createMessage(req, res) {
+async function createMessage(req, res) {
   const msg = req.body;
 
-  messages.unshift({
-    id: nanoid(),
+  const newMessage = {
     text: msg.messageText,
-    user: msg.authorName,
+    username: msg.authorName,
     added: new Date(),
-  });
+  };
+
+  await insertMessage(newMessage);
 
   res.redirect('/');
 }

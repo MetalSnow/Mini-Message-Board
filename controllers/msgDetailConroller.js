@@ -1,7 +1,8 @@
-const { messages } = require('./indexController');
+const { findMessage } = require('../db/queries');
 
-function getMessageDetail(req, res) {
-  const message = messages.find((m) => m.id === req.params.id);
+async function getMessageDetail(req, res) {
+  const message = await findMessage(req.params.id);
+  console.log(message);
   if (!message) {
     return res.status(404).send('Message not found');
   }
